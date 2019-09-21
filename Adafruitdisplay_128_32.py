@@ -29,26 +29,27 @@ RST = 24
 
 disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST)     # declaring variable disp
 
-disp.begin()
+disp.begin()            # initializing diplay
 
-disp.clear()
-disp.display()
+disp.clear()            # clearing display
+                           
+disp.display()          # displaying on display
 
-image = Image.new('1', (128, 32))
+image = Image.new('1', (128, 32))    # generating new image
 
-draw = ImageDraw.Draw(image)
+draw = ImageDraw.Draw(image)         # drawing on image
 
-font = ImageFont.load_default()
+font = ImageFont.load_default()      # loading font
 
-draw.text((13, 10), "Hello World!", font=font, fill=255)
+draw.text((13, 10), "Hello World!", font=font, fill=255)   # printing text on display
 
-disp.image(image)
+disp.image(image)    # imaging on display
 
-disp.display()
+disp.display()       # displaying display
 
-time.sleep(10)
+time.sleep(10)       # waiting 10s
 
-disp.clear()
-disp.display()
+disp.clear()         # clearing display
+disp.display()       # displaying display
 
 
