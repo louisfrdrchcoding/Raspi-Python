@@ -1,5 +1,5 @@
 import keyboard
 
-events = keyboard.record(until="esc")
+events = keyboard.record(until="esc")     # recording keyboard until escape is pressed
 
-print(events)
+print(events)                             # printing it
