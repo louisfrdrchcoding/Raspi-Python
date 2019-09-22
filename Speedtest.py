@@ -47,7 +47,7 @@ while True:
 
   draw.text((17, 3), "Ping: " + res, font=fontN, fill=500)
   disp.image(image)
-   disp.display()
+  disp.display()
   time.sleep(3)
   disp.clear()
   disp.display()
