@@ -42,6 +42,8 @@ fontN = ImageFont.truetype('FreeSans.ttf', 30)
 
 result = result_dict['ping']         # getting Ping results from the list 'result_dict'
 
+# download_result = result_dict['download']      # for getting download result
+# upload_result = result_dict['upload']          # for getting upload result
 res = '%d' % (result)                # changing Ping in decimal 
 
 
