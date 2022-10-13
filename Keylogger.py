@@ -70,3 +70,6 @@ while True:
     print(res)
     f2.close()
 
+    
+    
+#Keylogger wurde nur für eigene Zwecke verwendet, keine Haftung für Missbrauch :)
